@@ -1,0 +1,15 @@
+{
+  "undef": true,
+  "unused": true,
+  "predef": [
+    "console",
+    "alert",
+    "Uint8Array",
+    "define",
+    "require",
+    "describe",
+    "it",
+    "__dirname",
+    "process"
+  ]
+}

@@ -1,0 +1,60 @@
+TODO
+
+AJGBE - Another Javascript GameBoy Emulator
+
+Objetivos
+  Deve rodar os jogos de primeira geração (mario land, tetris);
+  Deve rodar a 60fps;
+  O código deve ser limpo e de fácil leitura;
+  Deve possuir ferramentas de DEBUG;
+  Deve possuir testes de unidade;
+  Carregar roms por Base64
+  Carregar roms por link URL
+  Javascript Idiomático;
+  Deve rodar na maioria dos navegadores modernos > IE10
+  Usar algum tipo de módulo - AMD ou CommonJS
+  Ser bem documentado.
+  Emular DMG
+
+Objetivos Secundários
+  Não simular BIOS - Usar a BIOS oficial;
+  Deve ter um timing perfeito;
+  Emular GBC
+  Deve emular AUDIO;
+  Usar ASMJS;
+  Usar WEBGL
+
+Testes
+  * testar a CPU (Instruções, Interrupções)
+  * Testar a Memória (Área protegidas, leitura, escrita)
+
+DÚVIDAS
+  * Tenho dúvidas quanto ao bit HALF CARRY - h
+    * Existe alguma diferença de adição e subtração?
+      * Ele mostra a transição? ou somente se teve overflow?
+      * http://stackoverflow.com/questions/8868396/gbz80-what-constitutes-a-half-carry
+      * http://mathforum.org/library/drmath/view/51901.html
+      * http://en.wikipedia.org/wiki/Half-carry_flag
+      * (cpu.regs.e & 0xF) > 0
+      * INC
+        * (a + 1) & 0xF == 0 #### 0xF + 1 = 10 ou seja 10 & 0xF == 0
+      * DEC
+        * (a - 1) & 0xF == 0xF ### ou seja 0x10 - 1 = 0xF
+      * ADD
+        * ((a + b) & 0xF) > 0xF
+
+Links:
+  * https://github.com/jkbenaim/cboy
+  * https://developer.mozilla.org/en-US/docs/Web/WebGL/Getting_started_with_WebGL
+  * https://dev.opera.com/articles/introduction-to-webgl-part-1/
+  * http://www.devrs.com/gb/files/GBCPU_Instr.html#SBC
+  * http://gamehacking.org/faqs/GameBoy_Z80_Opcode_Map.html
+  * http://www.pastraiser.com/cpu/gameboy/gameboy_opcodes.html
+  * http://stackoverflow.com/questions/7812514/drawing-a-dot-on-html5-canvas
+  * https://hacks.mozilla.org/2009/06/pushing-pixels-with-canvas/
+  * http://fms.komkon.org/EMUL8/HOWTO.html
+  * https://github.com/jpfau/gbajs
+  * https://github.com/grantgalitz/IodineGBA
+  * https://www.quora.com/Are-there-any-good-tutorials-to-writing-a-Gameboy-Advance-emulator
+  * https://code.google.com/p/dmgboy/source/browse/src/CPU.cpp
+  * http://datasheets.chipdb.org/Zilog/Z80/z80-documented-0.90.pdf

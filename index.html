@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>YAJGBE - Yet Another Javascript GameBoy Emulator</title>
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+      html {
+        font-family: 'Press Start 2P', cursive;
+        background-color: #000000;
+        color: #8bac0f;
+      }
+
+      a {
+        color: #152DFF;
+      }
+
+      .screen {
+        width: 160px;
+        height: 144px;
+        background-color: #9bbc0f;
+        border: 5px solid #444;
+      }
+
+      .container {
+        width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      p.title {
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+
+      p.instructions {
+        font-size: 12px;
+      }
+
+      p.copyright {
+        font-size: 9px;
+      }
+    </style>
+    <script charset="utf-8" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js" data-main="src/main.js"></script>
+  </head>
+  <body>
+  <div class="container">
+    <p class="title">YAJGBE - Yet Another Javascript GameBoy Emulator</p>
+
+    <canvas class="screen"></canvas>
+
+    <p class="instructions">
+      HOW TO PLAY? </br></br>
+
+      Z -> (B)</br>
+      X -> (A)</br>
+      S -> (SELECT)</br>
+      ENTER -> (START)</br>
+    </p>
+
+    <p class="copyright">Copyright (C) 2014 Claudemiro Alves Feitosa Neto <a href="mailto:dimiro1@gmail.com">dimiro1@gmail.com</a></p>
+  </div>
+  </body>
+</html>
